@@ -11,15 +11,15 @@ on which version".
 | 1 | `git.pp-ng` (hub) | TypeScript | [`patchwork-quilt/git.pp-ng`](https://github.com/patchwork-quilt/git.pp-ng) | - | 1,151 / 1,151 | n/a | n/a | in production |
 | 2 | `git.pp-ng/referee/` | Python | [`patchwork-quilt/git.pp-ng`](https://github.com/patchwork-quilt/git.pp-ng) (referee/) | - | 1,151 / 1,151 | 500/500 | yes | reference |
 | 3 | `gitpp-beam` | Elixir | [`patchwork-quilt/gitpp-beam`](https://github.com/patchwork-quilt/gitpp-beam) | - | (per hub) | n/a | yes | converged |
-| 4 | `gitpp-js` | JavaScript (ESM) | [`SuperInstance/gitpp-js`](https://github.com/SuperInstance/gitpp-js) | v0.1.2 | 28 / 28 public | 500/500 | yes | live |
-| 5 | `gitpp-cs` | C# / .NET 9 | [`SuperInstance/gitpp-cs`](https://github.com/SuperInstance/gitpp-cs) | v0.3.1 | 28 / 28 public | 500/500 | yes (after v0.3.0) | live |
-| 6 | `gitpp-pl` | Perl 5 | [`SuperInstance/gitpp-pl`](https://github.com/SuperInstance/gitpp-pl) | v0.1.3 | 28 / 28 public | 500/500 | yes | live |
-| 7 | `gitpp-c` | C99, stdlib | [`SuperInstance/gitpp-c`](https://github.com/SuperInstance/gitpp-c) | v0.1.1 | 28 / 28 public | 500/500 | yes | live |
+| 4 | `gitpp-js` | JavaScript (ESM) | [`SuperInstance/gitpp-js`](https://github.com/SuperInstance/gitpp-js) | v0.1.2 | 28 / 28 public | 1000/1000 | yes | live |
+| 5 | `gitpp-cs` | C# / .NET 9 | [`SuperInstance/gitpp-cs`](https://github.com/SuperInstance/gitpp-cs) | v0.3.1 | 28 / 28 public | 1000/1000 | yes (after v0.3.0) | live |
+| 6 | `gitpp-pl` | Perl 5 | [`SuperInstance/gitpp-pl`](https://github.com/SuperInstance/gitpp-pl) | v0.1.4 | 28 / 28 public | 1000/1000 | yes | live |
+| 7 | `gitpp-c` | C99, stdlib | [`SuperInstance/gitpp-c`](https://github.com/SuperInstance/gitpp-c) | v0.1.2 | 28 / 28 public | 1000/1000 | yes | live |
 | - | `gitpp-rust` | Rust | [`SuperInstance/gitpp-rust`](https://github.com/SuperInstance/gitpp-rust) | scaffold | (not yet) | (not yet) | pending | pending cargo |
 
 ## Cross-port byte-equivalence
 
-**500/500 random float64 records** produce **byte-identical SHA-256
+**1000/1000 random float64 records** produce **byte-identical SHA-256
 leaves** across all 5 fold ports (Python, JS, C, C#, Perl). The
 17,004-record full corpus is in progress in the background.
 
@@ -57,8 +57,8 @@ port, is a proof that the spec is complete.
 |------|------------------|-----------------|
 | `gitpp-js` | v0.1.0 → v0.1.2 | v0.1.1: `numFormat()` for float precision; v0.1.2: 1e16 integer limit |
 | `gitpp-cs` | v0.1.0 → v0.3.1 | v0.3.0: refactor library methods; v0.3.1: 1e16 limit, 15/16/17 sci fallback |
-| `gitpp-pl` | v0.1.0 → v0.1.3 | v0.1.1: 5 bug fixes; v0.1.2: 1e16 limit; v0.1.3: integer check uses arithmetic |
-| `gitpp-c` | v0.1.0 → v0.1.1 | v0.1.1: 1e16 integer limit (was 1e21) |
+| `gitpp-pl` | v0.1.0 → v0.1.4 | v0.1.1: 5 bug fixes; v0.1.2: 1e16 limit; v0.1.3: integer check uses arithmetic; v0.1.4: 15/16/17 fallback excludes integer form |
+| `gitpp-c` | v0.1.0 → v0.1.2 | v0.1.1: 1e16 integer limit (was 1e21); v0.1.2: 15/16/17 fallback excludes integer form |
 | `git.pp-doctor` | v0.1.0 → v0.2.1 | v0.2.1: 1e16 integer limit |
 
 ## See also
